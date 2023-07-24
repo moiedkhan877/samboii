@@ -1,0 +1,31 @@
+<%- include('partials/header')%>
+<!--  -->
+<%- include('partials/nav')%>
+<form class="m-auto w-25 mt-5" action="/updateuser/<%= user._id%>" method="post">
+    <h1 class="mb-4">Sign-Up Page</h1>
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="johndoe"
+        value="<%= user.username%>"
+        name="username"
+    />
+    <input
+        class="form-control mb-3"
+        type="email"
+        placeholder="example@john.com"
+        value="<%= user.email%>"
+        name="email"
+    />
+    <input
+        class="form-control mb-3"
+        type="password"
+        placeholder="********"
+        value="<%= user.password%>"
+        name="password"
+    />
+    <button class="btn btn-primary w-25">Sign Up</button>
+    <p>Already have an account ? <a href="/signin">update</a></p>
+</form>
+
+<%- include('partials/footer')%>
